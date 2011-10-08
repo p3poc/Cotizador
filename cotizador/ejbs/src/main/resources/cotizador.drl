@@ -1,0 +1,12 @@
+package ar.com.p3.cotizador.model
+
+import ar.com.p3.cotizador.model.entities.*;
+
+rule "validar cotizacion"
+	when
+		c : Cotizacion()
+	then
+		System.out.println( "validando cotizacion" );
+		c.setValor(5d);
+		insert(c);
+end
